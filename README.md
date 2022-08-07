@@ -1,3 +1,3 @@
-# Help Ukraine
+# Write documents!
 
-This site is made for people that want to donate to ukraine during their war with russia. It has all of the wesbites that you can donate to on it all in one place. 
+This is a site where you can write documents, like google docs and word. I am currently implementing this on github pages to see how it works and then I will publish it as a desktop app with electron. The installer will be here once I release the first version!
