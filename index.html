@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Editor</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="buttons">
+      <button
+        class="bold"
+        onclick="document.execCommand('bold',false,null);"
+        title="Bold"
+      >
+        𝗕
+      </button>
+
+      <button
+        class="italic"
+        onclick="document.execCommand('italic',false,null);"
+        title="Italic"
+      >
+        𝘐
+      </button>
+
+      <button
+        class="underline"
+        onclick="document.execCommand('underline',false,null);"
+        title="Underline"
+      >
+        U̲
+      </button>
+
+      <input
+        type="color"
+        class="color-picker"
+        id="colorPicker"
+        oninput="changeColorText(this.value);"
+        title="Change text color"
+      />
+
+      <button id="highlight"><mark>Highlight</mark></button>
+    </div>
+
+    <fieldset class="userInput" contenteditable="true"></fieldset>
+
+    <script>
+      var boldBtn = document.querySelector(".bold");
+      var italicBtn = document.querySelector(".italic");
+      var underlineBtn = document.querySelector(".underline");
+      var colorPicker = document.querySelector(".color-picker");
+      var highlightBtn = document.querySelector("#highlight");
+
+      boldBtn.addEventListener("click", function () {
+        boldBtn.classList.toggle("inUse");
+      });
+
+      italicBtn.addEventListener("click", function () {
+        italicBtn.classList.toggle("inUse");
+      });
+
+      underlineBtn.addEventListener("click", function () {
+        underlineBtn.classList.toggle("inUse");
+      });
+
+      highlightBtn.addEventListener("click", function () {
+        highlightBtn.classList.toggle("inUse");
+      });
+
+      const changeColorText = (color) => {
+        document.execCommand("styleWithCSS", false, true);
+        document.execCommand("foreColor", false, color);
+      };
+
+      document
+        .getElementById("highlight")
+        .addEventListener("click", function () {
+          var range = window.getSelection().getRangeAt(0),
+            span = document.createElement("span");
+
+          span.className = "highlight";
+          span.appendChild(range.extractContents());
+          range.insertNode(span);
+        });
+    </script>
+  </body>
+</html>
