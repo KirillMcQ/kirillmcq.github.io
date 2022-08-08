@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <title>Editor</title>
     <link rel="stylesheet" href="index.css" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3326377745026558"
-     crossorigin="anonymous"></script>
-    <meta name="google-site-verification" content="anmP6NwB9miuMCbiChQrrQ5p6xaBl1DUp6Do8HvRZUo" />
   </head>
   <body>
     <div class="buttons">
@@ -43,48 +40,15 @@
       />
 
       <button id="highlight"><mark>Highlight</mark></button>
+
+      <button id="bulletPoint">•</button>
+
+      <!-- Make something to change the font size -->
+      <button id="fontSize" onclick="changeFont()">Change Font Size</button>
+      <input type="number" id="fontInput" placeholder="Font size" />
     </div>
 
     <fieldset class="userInput" contenteditable="true"></fieldset>
-
-    <script>
-      var boldBtn = document.querySelector(".bold");
-      var italicBtn = document.querySelector(".italic");
-      var underlineBtn = document.querySelector(".underline");
-      var colorPicker = document.querySelector(".color-picker");
-      var highlightBtn = document.querySelector("#highlight");
-
-      boldBtn.addEventListener("click", function () {
-        boldBtn.classList.toggle("inUse");
-      });
-
-      italicBtn.addEventListener("click", function () {
-        italicBtn.classList.toggle("inUse");
-      });
-
-      underlineBtn.addEventListener("click", function () {
-        underlineBtn.classList.toggle("inUse");
-      });
-
-      highlightBtn.addEventListener("click", function () {
-        highlightBtn.classList.toggle("inUse");
-      });
-
-      const changeColorText = (color) => {
-        document.execCommand("styleWithCSS", false, true);
-        document.execCommand("foreColor", false, color);
-      };
-
-      document
-        .getElementById("highlight")
-        .addEventListener("click", function () {
-          var range = window.getSelection().getRangeAt(0),
-            span = document.createElement("span");
-
-          span.className = "highlight";
-          span.appendChild(range.extractContents());
-          range.insertNode(span);
-        });
-    </script>
+    <script src="use.js"></script>
   </body>
 </html>
