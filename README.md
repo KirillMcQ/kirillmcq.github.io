@@ -4,3 +4,7 @@ This is a site where you can write documents, like google docs and word. I am cu
 
 Changelog:
 V0.0 The first version. Just the bare features of underline, highlight, change text color, and italics. More to come soon!
+
+V0.1 Added Use.js for readability. 
+
+V0.2 Added a bullet point button to add a bullet point when clicked.
