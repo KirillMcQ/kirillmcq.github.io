@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252a;
+  font-family: "Montserrat", sans-serif;
+}
+
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logoBtn {
+  background-color: #24252a;
+  transition: none;
+}
+
+/* When you hover over logoBtn, nothing happens */
+.logoBtn:hover {
+  background-color: #24252a;
+}
+
+.logoA {
+  color: #edf0f1;
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+}
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.headContent {
+  /* Make everything in the div including the text have a background color of light blue */
+  background-color: #0099ff;
+
+  padding: 20px;
+  /* margin-top: 20px; */
+
+  /* Move the image to the right */
+  text-align: center;
+}
+
+.hiKirill {
+  background-color: #0099ff;
+  /* Move this down */
+  margin-top: 20px;
+  /* padding: 20px; */
+
+  font-size: 100px;
+}
+
+.smallKirillP {
+  background-color: #0099ff;
+}
+
+.webDev {
+  height: 40px;
+  width: 100px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0px;
+  background-color: #632de9;
+
+  /* Keep the text on the same line */
+  display: inline-block;
+  vertical-align: middle;
+}
+.webDev:hover {
+  background-color: #632de9;
+  cursor: pointer;
+}
+
+.hiKirillTiny {
+  background-color: #0099ff;
+  /* Move this down */
+}
+
+svg {
+  margin: 0;
+  padding: 0;
+}
+
+.projectsTitle {
+  color: #edf0f1;
+  font-size: 50px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+}
+
+.entry img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  margin: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Muli:400,700&display=swap");
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.container .items {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  animation: carouselAnim 60s infinite alternate linear;
+}
+.container .items .entry {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  background: white;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.05);
+}
+.container .items .entry p {
+  text-align: center;
+  padding: 1em;
+}
+.container .items .entry p.name {
+  font-weight: bold;
+}
+@keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + 1500px));
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .items {
+    animation: carouselAnim 30s infinite alternate linear;
+  }
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + 600px));
+    }
+  }
+}
+
+.quote {
+  background-color: white;
+}
+
+svg {
+  display: block;
+  margin: 0;
+}
+
+.textGrad {
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf 0%, #d1db3b 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.aboutHero {
+  background-color: black;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Mkae a hover effect */
+.aboutHero:hover {
+  background-color: black;
+}
