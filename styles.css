@@ -56,3 +56,9 @@ body {
     height: 60px;
     font-size: 18px;
 }
+
+.navbar-item:active {
+    width: 65px;
+    height: 65px;
+    opacity: 0.8;
+}
