@@ -1,8 +1,10 @@
 # Kirill McQuillin Personal/Portfolio Site
 
+## Will do this page in React. 
 This site will serve as my portfolio/personal site. I will add more features as I go.
 
 # TODO
+
 
 ## Finish Navbar
 
